@@ -6,7 +6,7 @@ import GoogleLogin from "react-google-login";
 //import FacebookLogin from "react-facebook-login";
 import './App.css';
 import { Route , Routes} from "react-router-dom";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Weather";
 import  { Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
@@ -26,7 +26,7 @@ function Login(){
         alert(result);
     };
     const handleLogin = (googleData) => {
-        navigate('dashboard');
+        navigate('weather');
       
         console.log(googleData);
     }
@@ -60,6 +60,7 @@ function Login(){
                                         ></GoogleLogin>
                                     )}
                                  </div>
+                                 <br></br>
                                  <div>
                                      <Fb/>
                                  </div>

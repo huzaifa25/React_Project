@@ -1,31 +1,30 @@
 import React, { Component } from 'react'
 import FacebookLogin from 'react-facebook-login'
-export class Fb extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      isLoggedin : false
-    }
-  }
-  responseFacebook=(response)=>{
+import { useNavigate } from "react-router-dom";
+
+// export class Fb extends Component {
+function Fb() {  
+  
+  let navigate = useNavigate();
+  const responseFacebook=(response)=>{
+    navigate('weather');
     console.log(response);
-    this.setState({
-      isLoggedin : true
-    })
+  
   }
-  render() {
+  // render() {
     return (
-      this.state.isLoggedin ? 'Home' : 
-      (<div>
+      <div>
         <FacebookLogin
-    appId="1193468328058792"
-    autoLoad={true}
-    fields="name,email,picture"
-    // onClick={componentClicked}
-    callback={this.responseFacebook} />
-      </div>)
+        appId="1193468328058792"
+        autoLoad={true}
+        fields="name,email,picture"
+        disableMobileRedirect={true}
+        // onSuccess={responseFacebook}
+        callback={responseFacebook} 
+        />
+      </div>
     )
-  }
+  // }
 }
 
 export default Fb

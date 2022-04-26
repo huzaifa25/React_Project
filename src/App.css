@@ -26,6 +26,8 @@
   box-shadow: 8px 8px 8px 8px #fbf3f3;
   border-radius: 10px;
   margin: 11rem 0rem 0rem 14rem;
+  padding: 0px 0 0 15rem;
+
 }
 input{
   border-bottom: groove;
@@ -99,7 +101,7 @@ input:focus{
     height: 35rem;
   }
   .login-box{
-    width: 81%%;
+    width: 81%;
     margin: 4rem 0rem 0rem 4rem;
   }
 }

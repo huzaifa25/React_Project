@@ -5,6 +5,8 @@ import Main from './Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from "./Weather";
 import { Route , Routes} from "react-router-dom";
+import Calender from './Calender';
+import Page from './components/Page/Page';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Routes>
         <Route exact path="/" element={<Main/>} />
           <Route path="/weather"  element={<Weather/>}/>
+          <Route path="/calender" element={<Calender/>}/>
+          <Route path="/page" element={<Page/>}/>
        </Routes> 
     </>
   );

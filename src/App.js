@@ -4,20 +4,29 @@ import Navbar from './Navbar';
 import Main from './Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from "./Weather";
-import { Route , Routes} from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Calender from './Calender';
 import Page from './components/Page/Page';
-
+import Sidemenu from './Sidemenu';
 function App() {
-  return (
-    <>  
+  const id = window.localStorage.getItem('id');
+  console.log(id)
 
-        <Routes>
-        <Route exact path="/" element={<Main/>} />
-          <Route path="/weather"  element={<Weather/>}/>
-          <Route path="/calender" element={<Calender/>}/>
-          <Route path="/page" element={<Page/>}/>
-       </Routes> 
+  return (
+    <>
+
+      <Routes>
+        {!id  && <Route exact path="/" element={<Main />} />}
+        {id && (
+          <>
+          
+            <Route path="/calender" element={<Calender />} />
+            <Route path="/page" element={<Page />} />
+            <Route path="/side" element={<Sidemenu />} />
+          </>
+        )}  
+          {/* <Route path="/weather" element={<Weather />} /> */}
+      </Routes>
     </>
   );
 }

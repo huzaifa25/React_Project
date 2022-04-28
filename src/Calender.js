@@ -6,12 +6,15 @@ import './App.css';
 // import the third-party stylesheets directly from your JS
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'; // needs additional webpack config!
-
+import Page from "./components/Page/Page";
+import Sidemenu from "./Sidemenu";
 
 class Calender extends Component{
     render(){
         return(
-           
+            <>
+            <Sidemenu/>
+            <Page/>
             <FullCalendar
 
             plugins={[ dayGridPlugin ]}
@@ -26,7 +29,7 @@ class Calender extends Component{
             ]}
          
             />
-            
+            </>
         
            
         )

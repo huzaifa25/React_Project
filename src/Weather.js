@@ -4,8 +4,10 @@ import React from 'react'
 import { useState } from 'react'
 import "./Weather.css"
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 function Weather() {
+    const navigate = useNavigate();
 
     const [weather, setWeather] = useState('');
     const [city, setCity] = useState('');
@@ -27,6 +29,10 @@ function Weather() {
 
         setCity(res.data.name)
 
+    }
+    function logoutId (){
+        window.localStorage.removeItem('id');
+        navigate('/')
     }
 
     //Converting K to C
@@ -67,6 +73,7 @@ function Weather() {
                 {weather && <Weath />}
             </div>
         </div>
+        <button onClick={logoutId}>Logout</button>
     </>
     )
 }

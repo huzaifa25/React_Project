@@ -67,7 +67,9 @@ input:focus{
   background-color: white;
   color: #008CBA;
 }
-
+.weather1{
+  margin: 0 0 0 0;
+}
 /* Responsive */
 @media (max-width: 991px) {
   .login-pic{

@@ -10,9 +10,10 @@ import UpcomingDaysForecast from '../UpcomingDaysForecast';
 import styles from './Forecast.module.css';
 
 const Forecast = ({ forecast }) => (
-    <Container className={styles.box} className={styles.img}>
-        <Row>
+    <div >
+        <Row className={styles.img}>
             <Col xs={12} md={4}>
+              
                 <div className={styles.card}>
                     <CurrentDay {...forecast.currentDay} />
                 </div>
@@ -22,7 +23,8 @@ const Forecast = ({ forecast }) => (
                 <UpcomingDaysForecast days={forecast.upcomingDays} />
             </Col>
         </Row>
-    </Container>
+      </div>
+   
 );
 
 Forecast.propTypes = {

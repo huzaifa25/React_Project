@@ -25,10 +25,9 @@ function Login(){
     const handleFailure = (result) => {
         alert(result);
     };
-    const handleLogin = (googleData) => {
-        navigate('weather');
-      
-        console.log(googleData);
+    const handleLogin = (googleData) => {  
+        window.localStorage.setItem('id', googleData.googleId );
+        navigate('/calender')
     }
     const handleLogout = () => {
         localStorage.removeItem('loginData');

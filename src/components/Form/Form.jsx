@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Form.module.css';
+import IpAddress from '../../Pages/IpAddress';
 
 const Form = ({ submitSearch }) => {
+    
     const [location, setLocation] = useState('');
-
+    const res = window.localStorage.getItem('res');
+    submitSearch(res);
     const onSubmit = e => {
         e.preventDefault();
         if (!location || location === '') return;
@@ -13,6 +16,8 @@ const Form = ({ submitSearch }) => {
     };
 
     return (
+        <>
+        <IpAddress/>
         <form onSubmit={onSubmit}>
             <input
                 aria-label="location"
@@ -28,6 +33,7 @@ const Form = ({ submitSearch }) => {
                 SEARCH
             </button>
         </form>
+        </>
     );
 };
 

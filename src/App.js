@@ -1,34 +1,38 @@
-import './App.css';
-import Login from './Login';
-import Navbar from './Navbar';
-import Main from './Main';
+import './Pages/App.css';
+import Main from './Pages/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Weather from "./Weather";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import Calender from './Calender';
+import {  Route, Routes } from "react-router-dom";
+import Calender from './Pages/Calender';
 import Page from './components/Page/Page';
-import Sidemenu from './Sidemenu';
+import Sidemenu from './Pages/Sidemenu';
+import IpAddress from './Pages/IpAddress';
+
 function App() {
   const id = window.localStorage.getItem('id');
-  console.log(id)
-
+  const fbId = window.localStorage.getItem('fbID');
+  
   return (
     <>
-
+    <IpAddress/>
       <Routes>
-        {!id  && <Route exact path="/" element={<Main />} />}
-        {id && (
+        {(!id || !fbId ) && <Route push path="/" element={<Main />} />}
+        {(id || fbId)&& (
           <>
-          
-            <Route path="/calender" element={<Calender />} />
+          <Route push path="/" element={<Main />} />
+            <Route exact path="/calender" element={<Calender />} />
             <Route path="/page" element={<Page />} />
             <Route path="/side" element={<Sidemenu />} />
           </>
-        )}  
-          {/* <Route path="/weather" element={<Weather />} /> */}
+          
+        )}   
+        
       </Routes>
+     
     </>
   );
+
+  
+
 }
 
 export default App;

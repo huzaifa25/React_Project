@@ -19,8 +19,8 @@ const Navbar = () => {
         {/* 1st logo part  */}
         <div className="logo">
           <h2>
-            <span>R</span>eact
-            <span>P</span>roject
+            <span>E</span>vent
+            <span>M</span>anagement
           </h2>
         </div>
 
@@ -80,11 +80,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* hero section  */}
-      {/* <section className="hero-section">
-        <p>Welcome to </p>
-        <h1>Thapa Technical</h1>
-      </section> */}
+  
     </>
   );
 };

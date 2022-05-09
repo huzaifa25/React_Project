@@ -16,11 +16,11 @@
 }
 .img {
    
-    width: 22%;
+    width: 76%;
     height: 40%;
-    top: 0;
-    left: 120rem;
-    background-image: url('../CurrentDay/assets/mountain.jpg');
+    top: 10rem;
+    left: 18rem;
+    background-image: url('https://colouringyourlife.com/wp-content/uploads/2020/07/Blue-Nimbus-CLouds.jpg');
     /* background-position: top, center; */
     border-radius: 1rem;
     /* background: darkturquoise; */
@@ -31,5 +31,19 @@
     /* left: 87rem; */
     background-repeat: no-repeat;
     /* margin: 0rem 0rem 0rem 119rem; */
-    padding: 0px 0 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+/* Responsive */
+@media (max-width: 991px) {
+    .img {
+        top: 10rem;
+    left: 13rem;
+    }
+}
+@media (max-width: 767px){
+    .img {
+        top: 10rem;
+    left: 13rem;
+    /* //background: darkturquoise; */
+    }
 }

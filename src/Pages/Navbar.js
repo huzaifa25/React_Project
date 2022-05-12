@@ -72,11 +72,11 @@ const Navbar = () => {
           </ul>
 
           {/* hamburget menu start  */}
-          <div className="hamburger-menu">
+          {/* <div className="hamburger-menu">
             <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
               <GiHamburgerMenu />
             </a>
-          </div>
+          </div> */}
         </div>
       </nav>
 

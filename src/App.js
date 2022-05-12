@@ -1,7 +1,7 @@
 import './Pages/App.css';
 import Main from './Pages/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {  Route, Routes } from "react-router-dom";
+import {  Navigate, Route, Routes } from "react-router-dom";
 import Calender from './Pages/Calender';
 import Page from './components/Page/Page';
 import Sidemenu from './Pages/Sidemenu';
@@ -15,16 +15,12 @@ function App() {
     <>
     <IpAddress/>
       <Routes>
-        {(!id || !fbId ) && <Route push path="/" element={<Main />} />}
-        {(id || fbId)&& (
+
           <>
           <Route push path="/" element={<Main />} />
             <Route exact path="/calender" element={<Calender />} />
-            <Route path="/page" element={<Page />} />
-            <Route path="/side" element={<Sidemenu />} />
+           
           </>
-          
-        )}   
         
       </Routes>
      

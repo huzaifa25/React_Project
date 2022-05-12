@@ -82,6 +82,7 @@ li {
   background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
 .logo h2 span {
@@ -157,6 +158,9 @@ li {
   .social-media ul {
     height: 8rem;
   }
+  .logo h2 {
+    margin:0 0 0 8rem;
+  }
 }
 
 /* responsive css style  */
@@ -216,7 +220,7 @@ li {
 
   .social-media .social-media-desktop {
     height: 0;
-    display: none;
+   
   }
 
   .social-media {
@@ -230,6 +234,10 @@ li {
     display: block;
     font-size: 2.5rem;
   }
+  .logo h2 {
+    margin:0 0 0 7rem;
+  }
+  
 }
 
 @media (max-width: 798px) {
@@ -253,6 +261,9 @@ li {
   .social-media .hamburger-menu {
     display: block;
     font-size: 2.5rem;
+  }
+  .logo h2 {
+    margin:0 0 0 11rem;
   }
 }
 

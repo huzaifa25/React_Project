@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -24,7 +24,7 @@ function Login() {
         
         window.localStorage.setItem('id', googleData.googleId);
         navigate('/calender')
-        window.location.reload();
+
     
     }
 

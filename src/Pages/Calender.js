@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -12,9 +12,9 @@ import Sidemenu from "./Sidemenu";
 import './Calender.css';
 import Navbar from "./Navbar";
 
-function Calender(){
 
-   
+function Calender(){
+  
     const events = [
         {
           id: 1,
@@ -41,7 +41,7 @@ function Calender(){
             end: '2022-05-13T05:00:00' },
             
       ];
-
+      
         return(
             <>
             
@@ -49,7 +49,7 @@ function Calender(){
             <Navbar/>
             <Page/>
             <div className="cal">
-               
+                  
                     <FullCalendar
                         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin]}
                         initialView="dayGridMonth"

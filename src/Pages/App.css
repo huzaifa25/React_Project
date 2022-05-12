@@ -89,7 +89,8 @@ input:focus{
     margin: 4rem 0rem 0rem 13rem;
   }
   .cal{
-    margin: 36rem 19rem 0rem 18rem;
+    margin: 34rem 0rem 0rem 12rem;
+    width: 77%;
   }
   
 }
@@ -108,9 +109,14 @@ input:focus{
     width: 75%;
     
   }
-  
+
 }
 
+@media (max-width: 500px) {
+  .fc-header-toolbar.fc-toolbar.fc-toolbar-ltr{
+    display: block;
+  }
+}
 
 @media (max-width: 330px) {
   .login-pic{
@@ -120,6 +126,9 @@ input:focus{
   .login-box{
     width: 81%;
     margin: 4rem 0rem 0rem 4rem;
+  }
+  .fc .fc-toolbar {
+    display: none;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
